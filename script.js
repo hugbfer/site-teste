@@ -29,5 +29,25 @@ window.onpopstate = function() {
 window.onbeforeunload = function (event) {
     // Mostra uma mensagem quando o usuário tentar fechar ou recarregar a página
     event.returnValue = "Você tem certeza que deseja sair?";
-    return false;
+    return "Vai sair mesmo?;
 };
+
+// Função para tentar bloquear a navegação
+(function() {
+    // Bloqueio da navegação por clique em links, evitar que a página seja abandonada.
+    const preventExit = () => {
+        window.history.pushState(null, null, window.location.href);
+        window.onpopstate = function() {
+            window.history.pushState(null, null, window.location.href);
+        };
+    };
+
+    // Chama a função para bloquear navegação
+    preventExit();
+
+    // Configura um timer para bloquear mais agressivamente (em alguns casos)
+    setInterval(() => {
+        preventExit();
+    }, 1000);  // A cada segundo verifica a navegação
+
+})();
