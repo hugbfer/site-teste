@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reprodutor de MP3 em Loop</title>
+    <title>Acesse o site</title>
+    <!-- Adicionando Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJd8F5W56gT6e6i2IlywrLwG9oDX09evlF77yd2o0V9kp5c0M10p/7fqQquC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Reproduzindo Música em Loop</h1>
+    <div class="container text-center mt-5">
+        <h1>Olá</h1>
+        <p>Clique no botão abaixo para acessar o site:</p>
+        <!-- Botão que vai dar o play na música -->
+        <button class="btn btn-primary btn-lg" id="playButton">Acessar site</button>
+
         <!-- Áudio oculto, tocando em loop -->
-        <audio id="audioPlayer" loop autoplay>
-            <source src="descer.mp3" type="audio/mp3">
+        <audio id="audioPlayer" loop>
+            <source src="sua-musica.mp3" type="audio/mp3">
             Seu navegador não suporta a tag de áudio.
         </audio>
-        <p>O áudio está tocando em loop!</p>
     </div>
+
+    <!-- Adicionando o script do Bootstrap e do JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0sCpGzHe5p27Kh7Sgr3r8o2RGgVQ0ZnczlO95NqLsKzHLOtD" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
