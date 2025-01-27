@@ -24,3 +24,10 @@ window.history.pushState(null, null, window.location.href);
 window.onpopstate = function() {
     window.history.pushState(null, null, window.location.href);
 };
+
+
+window.onbeforeunload = function (event) {
+    // Mostra uma mensagem quando o usuário tentar fechar ou recarregar a página
+    event.returnValue = "Você tem certeza que deseja sair?";
+    return false;
+};
