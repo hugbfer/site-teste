@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesse o site</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acessar site</title>
     <!-- Adicionando Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJd8F5W56gT6e6i2IlywrLwG9oDX09evlF77yd2o0V9kp5c0M10p/7fqQquC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container text-center mt-5">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container text-center my-5">
+      <div class="row d-block" id="conteudo">
         <h1>Olá</h1>
         <p>Clique no botão abaixo para acessar o site:</p>
         <!-- Botão que vai dar o play na música -->
         <button class="btn btn-primary btn-lg" id="playButton">Acessar site</button>
+      </div>
 
+      <div class="row">
         <!-- Áudio oculto, tocando em loop -->
         <audio id="audioPlayer" loop>
-            <source src="sua-musica.mp3" type="audio/mp3">
-            Seu navegador não suporta a tag de áudio.
+          <source src="descer.mp3" type="audio/mp3" />
+          Seu navegador não suporta a tag de áudio.
         </audio>
+      </div>
+
+      <div class="row d-none" id="mensagem">
+        <img src="./danca.gif" alt="" class="imagem" />
+        <div class="mensagem">Agora vai ficar o dia todo ouvindo essa música maravilhosa</div>
+
+        <div class="letra mt-5">
+          Nós vai descer, vai descer <br />
+          Descer lá pra BC no finalzin' do ano
+        </div>
+      </div>
     </div>
 
     <!-- Adicionando o script do Bootstrap e do JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0sCpGzHe5p27Kh7Sgr3r8o2RGgVQ0ZnczlO95NqLsKzHLOtD" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pzjw8f+ua7Kw1TIq0sCpGzHe5p27Kh7Sgr3r8o2RGgVQ0ZnczlO95NqLsKzHLOtD"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
