@@ -1,0 +1,20 @@
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+/* Estilo para o botão */
+button {
+    margin-top: 20px;
+}
