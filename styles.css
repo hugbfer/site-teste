@@ -1,20 +1,44 @@
 /* Corpo da página */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 /* Estilo do título */
 h1 {
-    font-size: 2em;
-    color: #333;
+  font-size: 2em;
+  color: #333;
 }
 
 /* Estilo para o botão */
 button {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+.imagem {
+  display: block;
+  max-width: 90%;
+  max-height: 70%;
+  width: auto;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mensagem {
+  background-color: #0b5ed7;
+  color: #fff;
+
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bolder;
+}
+
+.letra {
+  font-size: 0.8rem;
+  font-style: italic;
 }
