@@ -26,15 +26,30 @@ window.onpopstate = function() {
 };
 
 
+
+// Previne o fechamento da aba/navegador e minimização
 window.onbeforeunload = function (event) {
-    // Mostra uma mensagem quando o usuário tentar fechar ou recarregar a página
-    event.returnValue = "Você tem certeza que deseja sair?";
-    return "Vai sair mesmo?;
+    event.returnValue = "Você tem certeza que deseja sair? A música vai parar.";
+    return "Você tem certeza que deseja sair? A música vai parar.";
 };
 
-// Função para tentar bloquear a navegação
+// Tenta manter o áudio tocando se a aba for minimizada
+document.addEventListener("visibilitychange", function() {
+    if (document.hidden) {
+        // Se a aba foi minimizada ou não está visível, tente continuar a música
+        audioPlayer.play().catch(error => {
+            console.log("Erro ao tentar continuar o áudio:", error);
+        });
+    } else {
+        // Quando a aba volta a ser visível, tenta garantir que o áudio continue
+        audioPlayer.play().catch(error => {
+            console.log("Erro ao tentar continuar o áudio:", error);
+        });
+    }
+});
+
+// Previne a navegação para outra página ou fechamento da aba
 (function() {
-    // Bloqueio da navegação por clique em links, evitar que a página seja abandonada.
     const preventExit = () => {
         window.history.pushState(null, null, window.location.href);
         window.onpopstate = function() {
